@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='welcome.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Welcome</h2>
+        <p>Welcome, {{ username }}!</p>
+        <p>User Data:</p>
+        <ul>
+            <li><strong>Name:</strong> {{ name }}</li>
+            <li><strong>Phone:</strong> {{ phone }}</li>
+            <li><strong>Email:</strong> {{ email }}</li>
+            <li><strong>User Type:</strong> {{ usertype }}</li>
+            <li><strong>Date of Birth:</strong> {{ dateofbirth }}</li>
+        </ul>
+        <a href="{{ url_for('logout') }}">Logout</a>
+    </div>
+</body>
+</html>

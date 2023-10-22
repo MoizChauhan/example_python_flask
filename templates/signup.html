@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Signup</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Signup</h2>
+        <form method="POST">
+            {{ form.hidden_tag() }}
+            {{ form.name.label }}
+            {{ form.name(class="form-control", placeholder="Name") }}
+            {{ form.username.label }}
+            {{ form.username(class="form-control", placeholder="Username") }}
+            {{ form.phone.label }}
+            {{ form.phone(class="form-control", placeholder="Phone") }}
+            {{ form.email.label }}
+            {{ form.email(class="form-control", placeholder="Email") }}
+            {{ form.password.label }}
+            {{ form.password(class="form-control", placeholder="Password") }}
+            {{ form.usertype.label }}
+            {{ form.usertype(class="form-control") }}
+            {{ form.dateofbirth.label }}
+            {{ form.dateofbirth(class="form-control") }}
+            <button type="submit">Signup</button>
+        </form>
+        <p>Already have an account? <a href="{{ url_for('index') }}">Login</a></p>
+
+    </div>
+</body>
+</html>

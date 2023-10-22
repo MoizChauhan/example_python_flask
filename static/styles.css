@@ -1,0 +1,141 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    text-align: center;
+    margin-top: 100px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 0px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    text-align: left;
+}
+input {
+    width: 90%; /* Adjusted to 100% */
+    padding: 8px 8px 8px 8px; /* Adjusted padding */
+    margin: 6px 0 ;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+
+}
+p {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Style for the select element */
+select {
+    width: 95%;
+    padding: 8px; /* Adjusted padding */
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Style for dropdown options (if needed) */
+select option {
+    background-color: #fff;
+    color: #333;
+    border: none;
+    padding: 5px;
+}
+
+/* Style for the selected option (when the dropdown is not expanded) */
+select::-ms-expand {
+    display: none;
+}
+
+/* Style for the dropdown arrow indicator (non-standard CSS) */
+select::after {
+    content: "\25BC";
+    position: absolute;
+    top: 13px;
+    right: 10px;
+}
+
+/* Style for the dropdown on hover or focus (optional) */
+select:hover, select:focus {
+    border: 2px solid #007BFF;
+}
+
+/* Styling for flashed messages */
+.flash-messages {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+}
+
+.flash-message {
+    padding: 10px;
+    background-color: #FF5733;
+    /* margin: 10px 0; */
+    border-radius: 4px;
+    font-weight: bold;
+    text-align: center;
+    animation: blink 2s linear infinite; /* Blink animation */
+}
+
+.flash-message.success {
+    background-color: #4CAF50; /* Green background for success messages */
+    color: #fff; /* White text color */
+    animation: blink 2s linear infinite; 
+}
+
+.flash-message.error {
+    background-color: #FF5733; /* Red background for error messages */
+    color: #fff; /* White text color */
+    animation: blink 2s linear infinite; 
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
